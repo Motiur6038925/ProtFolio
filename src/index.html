@@ -1,0 +1,998 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./input.css">
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  crossorigin="anonymous" />
+
+
+</head>
+
+<body>
+  <section class="bg-[#f9f8f4]">
+    <header class=" pb-[30px] pt-[50px]">
+      <div class=" drop-shadow-md container mx-auto flex justify-between rounded-2xl bg-white px-[100px] py-5">
+
+        <div class="logo">
+          <a href="#">
+            <img
+              src="data:image/png;base64,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"
+              alt="">
+          </a>
+
+        </div>
+
+        <!-- Menu -->
+
+        <nav class=" flex items-center gap-[50px]">
+          <ul class=" flex gap-5">
+            <li class=" p-2">
+              <a href="#" class="text-[16px] font-medium text-p transition-all duration-300 hover:text-h">
+                HOME
+              </a>
+
+            </li>
+            <li class=" p-2">
+              <a href="#" class="text-[16px] font-medium text-p transition-all duration-300 hover:text-h">
+                About
+              </a>
+
+            </li>
+            <li class=" p-2">
+              <a href="#" class="text-[16px] font-medium text-p transition-all duration-300 hover:text-h">
+                Servies
+              </a>
+
+            </li>
+            <li class=" p-2">
+              <a href="#" class="text-[16px] font-medium text-p transition-all duration-300 hover:text-h">
+                Blog
+              </a>
+
+            </li>
+            <li class=" p-2">
+              <a href="#" class="text-[16px] font-medium text-p transition-all duration-300 hover:text-p">
+                Content
+              </a>
+
+            </li>
+            <li class=" p-2">
+              <a href="#" class="text-[16px] font-medium text-p transition-all duration-300 hover:text-p">
+                More Info
+              </a>
+
+            </li>
+          </ul>
+
+        </nav>
+
+      </div>
+
+    </header>
+  </section>
+
+  <!-- About Section -->
+  <section class=" relative bg-[#f9f8f4] py-24">
+
+    <div class=" container mx-auto">
+      <!-- About intro -->
+      <div class=" grid grid-cols-12 items-center gap-[30px]">
+        <div class=" col-span-5 px-8">
+          <div class=" relative">
+            <div class="-z-1 absolute inset-0 -ms-3 -mt-[10px] h-[100%] rounded-full border ">
+
+            </div>
+            <div>
+              <img class=" rounded-full shadow-md shadow-gray-200"
+                src="https://media.istockphoto.com/id/1432260067/photo/a-cheerful-man-sits-at-a-conference-table-across-from-his-two-female-colleagues-and-learns-to.jpg?s=2048x2048&w=is&k=20&c=cNTjPToK25GP5WyM5VN-d0TqAihLUMf5pGjh9uTPiE8="
+                alt="">
+            </div>
+            <div class=" absolute bottom-20 m-3 w-44 rounded-lg bg-white p-4 text-center shadow-md">
+
+              <h6 class=" font-semibold">Web Desiner</h6>
+              <span class=" mb-0 text-2xl font-medium text-theme "> 7+ </span>
+              <span class=" text-sm text-p"> Years Experience</span>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-span-7 ">
+          <div class=" ms-5">
+            <h3 class=" mb-2 text-[24px] font-medium text-theme">
+              Hello, I'm
+            </h3>
+            <h3 class=" mb-2 text-[60px] font-semibold text-h"> Motiur Rahman</h3>
+            <h3> A Creative Desiner From Bangladesh</h3>
+            <p class=" text-[16px] text-p">
+              Obviously I'am A Web Designer Web Devloper with over 7 Years of experience
+              Obviously I'am A Web Designer Web Devloper with over 7 Years of experience
+              Obviously I'am A Web Designer Web Devloper with over 7 Years of experience
+              Obviously I'am A Web Designer Web Devloper with over 7 Years,
+
+            </p>
+            <p class=" mt-6 text-[16px] text-p">
+              I'm a professional web desingner My motive is to build a best web design with my all years of experience
+            </p>
+
+            <div class="mt-[60px] flex gap-[50px]">
+              <div>
+                <a href="#"
+                  class="rounded-full bg-theme px-[30px] py-[16px] text-[18px] font-semibold text-white transition-all duration-300 hover:bg-[#0b112f] hover:text-white">
+                  About Me
+                </a>
+              </div>
+              <div>
+                <ul class="flex items-center gap-[30px]">
+                  <li>
+                    <a href="#" class=" text-[20px]">
+                      <i class=" fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class=" text-[20px]">
+                      <i class=" fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class=" text-[20px]">
+                      <i class=" fab fa-github"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class=" text-[20px]">
+                      <i class=" fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class=" mt-[100px] grid grid-cols-4 gap-8">
+        <div class=" rounded-2xl bg-white p-8 text-center">
+          <div class="mb-6 inline-flex rounded-full bg-[#f3e8ff]">
+
+
+            <div class=" inline-flex h-12 w-12 items-center justify-center rounded-full">
+              <i class="fas fa-praying-hands text-[#933ea]"></i>
+
+
+
+
+            </div>
+
+
+          </div>
+          <div>
+
+            <h6 class=" mb-3 text-[22px] font-semibold text-h"> 6 Years Experience</h6>
+            <p> The simple answer is that it all depends on how much</p>
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class=" rounded-2xl bg-white p-8 text-center">
+          <div class="mb-6 inline-flex rounded-full bg-[#f3e8ff]">
+
+
+            <div class=" inline-flex h-12 w-12 items-center justify-center rounded-full">
+              <i class="fas fa-cloud-download-alt text-[#22c55e]"></i>
+
+
+
+
+            </div>
+
+
+          </div>
+          <div>
+
+            <h6 class=" mb-3 text-[22px] font-semibold text-h"> 90+ Project Completed</h6>
+            <p> Project completion is often the most neglected phase</p>
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+        <div class=" rounded-2xl bg-white p-8 text-center">
+          <div class="mb-6 inline-flex rounded-full bg-[#f3e8ff]">
+
+
+            <div class=" inline-flex h-12 w-12 items-center justify-center rounded-full">
+              <i class="fab fa-r-project text-[#f97316]"></i>
+
+
+
+
+            </div>
+
+
+          </div>
+          <div>
+
+            <h6 class=" mb-3 text-[22px] font-semibold text-h"> 10 Million Download</h6>
+            <p> Dwonload our app and register users in 3 minutes</p>
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class=" rounded-2xl bg-white p-8 text-center">
+          <div class="mb-6 inline-flex rounded-full bg-[#f3e8ff]">
+
+
+            <div class=" inline-flex h-12 w-12 items-center justify-center rounded-full">
+              <i class="fab fa-r-project text-[#d946ef]"></i>
+
+
+
+
+            </div>
+
+
+          </div>
+          <div>
+
+            <h6 class=" mb-3 text-[22px] font-semibold text-h"> 3 Fector Recovery</h6>
+            <p>It is comonly Adopted To secure message trancmission</p>
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </section>
+
+  <!-- offer -->
+
+  <section class=" relative bg-white py-24">
+
+    <div class=" container mx-auto">
+      <div class=" grid grid-cols-1 pb-8 text-center">
+
+        <h3 class=" mb-6 text-[30px] font-bold leading-normal text-h"> what i do for client</h3>
+        <p>Most Common Method for designing website that work well on dekstop is responsive and adaptive design</p>
+
+
+
+
+      </div>
+
+
+      <div class=" mt-8 grid grid-cols-3 gap-[30px]">
+
+
+        <!-- Content -->
+        <div
+          class=" rounded-2xl bg-white px-6 py-10 shadow shadow-gray-200 transition-all duration-300 hover:shadow-md">
+          <svg class=" h-[24px] w-[24px]" xmlns="http://www.w3.org/2000/svg" height="1em"
+            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #f4510b
+              }
+            </style>
+            <path
+              d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z" />
+          </svg>
+
+          <div class=" mt-7">
+
+            <a href="#" class="text-[17px] font-bold text-h hover:text-theme">
+              UX / UI Design
+            </a>
+            <p class=" mt-3 text-[15px] text-p">
+              In project manegment successful completion of the project means you have delivered what you agread
+            </p>
+
+
+
+
+            <div class=" mt-5">
+              <a href="#" class="transition-all duration-300 hover:text-theme">Read More</a>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <!-- Content -->
+        <div
+          class=" rounded-2xl bg-white px-6 py-10 shadow shadow-gray-200 transition-all duration-300 hover:shadow-md">
+          <svg class=" h-[24px] w-[24px]" xmlns="http://www.w3.org/2000/svg" height="1em"
+            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #e96a16
+              }
+            </style>
+            <path
+              d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z" />
+          </svg>
+          <div class=" mt-7">
+
+            <a href="#" class="text-[17px] font-bold text-h hover:text-theme">
+              Ios App Designer
+            </a>
+            <p class=" mt-3 text-[15px] text-p">
+              In project manegment successful completion of the project means you have delivered what you agread
+            </p>
+
+
+
+
+            <div class=" mt-5">
+              <a href="#" class="transition-all duration-300 hover:text-theme">Read More</a>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <div
+          class=" rounded-2xl bg-white px-6 py-10 shadow shadow-gray-200 transition-all duration-300 hover:shadow-md">
+          <svg class=" h-[24px] w-[24px]" xmlns="http://www.w3.org/2000/svg" height="1em"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #da350b
+              }
+            </style>
+            <path
+              d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm0 32h106c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H38c-3.3 0-6-2.7-6-6V80c0-8.8 7.2-16 16-16zm426 96H38c-3.3 0-6-2.7-6-6v-36c0-3.3 2.7-6 6-6h138l30.2-45.3c1.1-1.7 3-2.7 5-2.7H464c8.8 0 16 7.2 16 16v74c0 3.3-2.7 6-6 6zM256 424c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-208c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm-48 104c-8.8 0-16-7.2-16-16 0-35.3 28.7-64 64-64 8.8 0 16 7.2 16 16s-7.2 16-16 16c-17.6 0-32 14.4-32 32 0 8.8-7.2 16-16 16z" />
+          </svg>
+          <div class=" mt-7">
+
+            <a href="#" class="text-[17px] font-bold text-h hover:text-theme">
+              Photography
+            </a>
+            <p class=" mt-3 text-[15px] text-p">
+              In project manegment successful completion of the project means you have delivered what you agread
+            </p>
+
+
+
+
+            <div class=" mt-5">
+              <a href="#" class="transition-all duration-300 hover:text-theme">Read More</a>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div
+          class=" rounded-2xl bg-white px-6 py-10 shadow shadow-gray-200 transition-all duration-300 hover:shadow-md">
+          <svg h-[24px] w-[24px] xmlns="http://www.w3.org/2000/svg" height="1em"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #f13709
+              }
+            </style>
+            <path
+              d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z" />
+          </svg>
+          <div class=" mt-7">
+
+            <a href="#" class="text-[17px] font-bold text-h hover:text-theme">
+              Graphic Desingner
+            </a>
+            <p class=" mt-3 text-[15px] text-p">
+              In project manegment successful completion of the project means you have delivered what you agread
+            </p>
+
+
+
+
+            <div class=" mt-5">
+              <a href="#" class="transition-all duration-300 hover:text-theme">Read More</a>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <div
+          class=" rounded-2xl bg-white px-6 py-10 shadow shadow-gray-200 transition-all duration-300 hover:shadow-md">
+          <svg h-[30px] w-[30px] xmlns="http://www.w3.org/2000/svg" height="1em"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #f0470f
+              }
+            </style>
+            <path
+              d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z" />
+          </svg>
+          <div class=" mt-7">
+
+            <a href="#" class="text-[17px] font-bold text-h hover:text-theme">
+              Web Security
+            </a>
+            <p class=" mt-3 text-[15px] text-p">
+              In project manegment successful completion of the project means you have delivered what you agread
+            </p>
+
+
+
+
+            <div class=" mt-5">
+              <a href="#" class="transition-all duration-300 hover:text-theme">Read More</a>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <div
+          class=" rounded-2xl bg-white px-6 py-10 shadow shadow-gray-200 transition-all duration-300 hover:shadow-md">
+          <svg h-[30px] w-[30px] xmlns="http://www.w3.org/2000/svg" height="1em"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #e62b0a
+              }
+            </style>
+            <path
+              d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z" />
+          </svg>
+          <div class=" mt-7">
+
+            <a href="#" class="text-[17px] font-bold text-h hover:text-theme">
+              Web Security
+            </a>
+            <p class=" mt-3 text-[15px] text-p">
+              In project manegment successful completion of the project means you have delivered what you agread
+            </p>
+
+
+
+
+            <div class=" mt-5">
+              <a href="#" class="transition-all duration-300 hover:text-theme">Read More</a>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+  <!-- Solution -->
+  <section class="relative bg-[#f9f8f4] py-24">
+
+    <div class=" container mx-auto">
+      <div class=" mx-auto mb-20  max-w-xl text-center">
+
+        <h2 class=" mb-6 text-[30px] font-bold leading-normal text-h"> Perfect Solutions For Your Business</h2>
+
+        <p class=" mx-auto max-w-xl text-[15px] text-p">Launch Your Campaign and benefit from our Expertise on Designing
+          and managing conversion centered Tailwind Css html Page</p>
+
+
+      </div>
+
+      <div class=" grid grid-cols-3 gap-7">
+        <div class=" mb-12 rounded-2xl bg-white p-8 text-center transition-all duration-300 hover:shadow-xl">
+
+          <div
+            class=" -mt-8 mb-9 inline-flex h-[5.5rem] w-[5.5rem] items-center justify-center rounded-full bg-[#f3e8ff]">
+
+            <i class=" fas fa-seedling text-[30px] text-[#a855f7]"></i>
+
+
+
+          </div>
+
+          <h3 class=" mb-4 text-[24px] font-semibold text-h">Grow Your Business</h3>
+
+          <p class="">
+            The phrasal sequence of the now so that many campaing and benefit
+          </p>
+
+        </div>
+
+
+
+        <div class=" mb-12 rounded-2xl bg-white p-8 text-center transition-all duration-300 hover:shadow-xl">
+
+          <div
+            class=" -mt-8 mb-9 inline-flex h-[5.5rem] w-[5.5rem] items-center justify-center rounded-full bg-[#dcfce7]">
+
+            <i class=" fas fa-shekel-sign text-[30px] text-[#22c55e]"></i>
+
+
+
+          </div>
+
+          <h3 class=" mb-4 text-[24px] font-semibold text-h">Drive More sales</h3>
+
+          <p class="">
+            The phrasal sequence of the now so that many campaing and benefit
+          </p>
+
+        </div>
+
+
+        <div class=" mb-12 rounded-2xl bg-white p-8 text-center transition-all duration-300 hover:shadow-xl">
+
+          <div
+            class=" -mt-8 mb-9 inline-flex h-[5.5rem] w-[5.5rem] items-center justify-center rounded-full bg-[#fef3c7]">
+
+            <i class=" fas fa-shekel-sign text-[30px] text-[#f59e0b]"></i>
+
+
+
+          </div>
+
+          <h3 class=" mb-4 text-[24px] font-semibold text-h">Discussion For Ideal</h3>
+
+          <p class="">
+            The phrasal sequence of the now so that many campaing and benefit
+          </p>
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+  </section>
+
+  <!-- latest News -->
+
+  <section class=" relative bg-white py-24">
+    <div class=" container mx-auto">
+      <div class=" mx-auto mb-20 max-w-xl text-center">
+
+        <h2 class="mb-6 text-[30px] font-bold leading-normal text-h">
+          Latest News
+        </h2>
+
+
+        <p>
+          Must explain to you how all this mistaken idea sequence of the is now pleasure born and give you a complete
+          account.
+        </p>
+
+
+      </div>
+
+      <!-- pic -->
+
+      <div class="grid grid-cols-3 gap-7">
+
+        <div class="relative overflow-hidden rounded-lg shadow shadow-slate-200">
+
+          <div class="h-[250px] w-full">
+            <img
+              src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRDReKkj9Dm9rK0V5mFYtwODMUQ2-3T37eFWvgbrGM9Myvs3ZNE"
+              alt="" class="h-full w-full object-cover" />
+
+          </div>
+
+          <div class="p-6">
+            <a href="#"
+              class="text-[24px] font-bold text-h transition-all duration-300 ease-in-out hover:text-theme">Mint your
+              own Ethos collections</a>
+
+
+            <p class="mt-3 text-[15px] text-p">
+              The phrasal sequence of the is now so that many campaign and benefit
+            </p>
+            <div class="mt-5">
+              <a href="#" class="transition-all duration-300 hover: text-theme">Read More
+              </a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <div class="relative overflow-hidden rounded-lg shadow shadow-slate-200">
+
+          <div class="h-[250px] w-full">
+            <img
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQAPkPJL-flbuebiSeIpgxEAQKHc4WPoXMXE79BxUvt4Hfb-tzl"
+              alt="" class="h-full w-full object-cover" />
+
+          </div>
+
+          <div class="p-6">
+            <a href="#"
+              class="text-[24px] font-bold text-h transition-all duration-300 ease-in-out hover:text-theme">>Incredible
+              Amount of Developer Energy' in Web3</a< /a>
+
+
+              <p class="mt-3 text-[15px] text-p">
+                The phrasal sequence of the is now so that many campaign and benefit
+              </p>
+              <div class="mt-5">
+                <a href="#" class="transition-all duration-300 hover: text-theme">Read More
+                </a>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <div class="relative overflow-hidden rounded-lg shadow shadow-slate-200">
+
+          <div class="h-[250px] w-full">
+            <img
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQAPkPJL-flbuebiSeIpgxEAQKHc4WPoXMXE79BxUvt4Hfb-tzl"
+              alt="" class="h-full w-full object-cover" />
+
+          </div>
+
+          <div class="p-6">
+            <a href="#"
+              class="text-[24px] font-bold text-h transition-all duration-300 ease-in-out hover:text-theme">>Incredible
+              Amount of Developer Energy' in Web3</a< /a>
+
+
+              <p class="mt-3 text-[15px] text-p">
+                The phrasal sequence of the is now so that many campaign and benefit
+              </p>
+              <div class="mt-5">
+                <a href="#" class="transition-all duration-300 hover: text-theme">Read More
+                </a>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+  </section>
+
+  <!-- Footer -->
+
+
+  <section class=" bg-[#F9F8F4]">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-12 gap-x-7 gap-y-14 pb-12 pt-24">
+        <div class="col-span-4">
+          <a href="#" class="mb-6 inline-block">
+            <img
+              src="data:image/png;base64,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"
+              alt="">
+          </a>
+          <p class="mb-8">
+            Welcome and open yourself to your truest love this year with us! With the Release Process
+          </p>
+          <!-- pic -->
+
+
+
+          <div>
+            <ul class="flex items-center gap-[30px]">
+              <li>
+                <a href="#" class="text-[20px]">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[20px]"> <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[20px]">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[20px]">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!-- hello    -->
+
+
+        <div class="col-span-2 col-start-7">
+          <h3 class="mb-6 text-[20px] font-semibold text-h">Marketplace</h3>
+          <ul class="flex flex-col space-y-2">
+            <li><a href="#" class="hover:text-theme"> All Data </a></li>
+            <li><a href="#" class="hover:text-theme"> Art </a></li>
+            <li><a href="#" class="hover:text-theme"> Music </a></li>
+            <li><a href="#" class="hover:text-theme"> Domain Names </a></li>
+            <li><a href="#" class="hover:text-theme"> Collectibles </a></li>
+            <li><a href="#" class="hover:text-theme"> Virtual World </a></li>
+          </ul>
+        </div>
+
+
+        <div class="col-span-2">
+          <h3 class="mb-6 text-[20px] font-semibold text-h">Company</h3>
+          <ul class="flex flex-col space-y-2">
+            <li><a href="#" class="hover:text-theme"> Explore </a></li>
+            <li><a href="#" class="hover:text-theme"> About</a></li>
+            <li><a href="#" class="hover:text-theme"> Contact Us </a> </li>
+            <li><a href="#" class="hover:text-theme"> Our Blog </a></li>
+            <li><a href="#" class="hover:text-theme"> FAQ </a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="col-span-2">
+          <h3 class="mb-6 text-[20px] font-semibold text-h">My Account </h3>
+          <ul class="flex flex-col space-y-2">
+            <li><a href="#" class="hover:text-theme"> Authors </a></li>
+            <li><a href="#" class="hover:text-theme"> Collection </a> </li>
+            <li><a href="#" class="hover:text-theme"> Author Profile </a></li>
+            <li><a class="hover:text-theme"> Create Item </a></li>
+          </ul>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="flex items-center justify-between py-8">
+        <span class="text-sm">
+          @ 2023 - Made By <strong> CodeCraftWithMotiur Rahman </strong></span>
+        <ul class="flex flex-wrap space-x-4 text-sm">
+          <li>
+            <a href="#" class="hover:text-theme"> Terms and condition </a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-theme"> Privacy Policy </a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+</body>
+
+</html>
